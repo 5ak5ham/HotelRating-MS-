@@ -1,0 +1,22 @@
+server:
+  port: 8998
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/
+      database: microservices
+
+eureka:
+  instance:
+    prefer-id-address: true
+  client:
+    fetch-registry: true
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: info, health
