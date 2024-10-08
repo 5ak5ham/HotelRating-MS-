@@ -25,8 +25,8 @@ public class UserController {
     }
 
     @GetMapping("/{userId}")
-    public ResponseEntity<Optional<User>> getUserById(@PathVariable String userId){
-        Optional<User> user = userService.getUserById(userId);
+    public ResponseEntity<User> getUserById(@PathVariable String userId){
+        User user = userService.getUserById(userId);
         return ResponseEntity.status(HttpStatus.OK).body(user);
     }
 

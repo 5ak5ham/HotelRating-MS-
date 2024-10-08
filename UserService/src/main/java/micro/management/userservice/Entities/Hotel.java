@@ -9,13 +9,15 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Rating {
+public class Hotel {
+    private String id;
 
-    private String ratingId;
-    private String userId;
-    private int rating;
-    private String hotelId;
-    private String remark;
+    private String name;
 
-    private Hotel hotel;
+    private String location;
+
+    private double longitude;
+    private double latitude;
+
+    private String about;
 }
